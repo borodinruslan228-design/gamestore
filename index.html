@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0d0e" />
+    <meta
+      name="description"
+      content="GameStore — игры и игровая техника для тех, кто играет всерьёз."
+    />
+    <title>GameStore — играй на своём уровне</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="GameStore — на главную">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M7.2 9.5h17.6a5 5 0 0 1 4.8 3.7l2 7.3a3.7 3.7 0 0 1-6.1 3.6l-4.2-3.7h-5.8l-4.2 3.7a3.7 3.7 0 0 1-6.1-3.6l2-7.3a5 5 0 0 1 4.8-3.7Z" transform="translate(-2 -2)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M10 15.5v5M7.5 18h5m8-1.6h.1m3 3.2h.1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">GAME<span>STORE</span></span>
+        </a>
+
+        <button class="mobile-menu-toggle icon-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a class="nav-link active" href="#catalog">Каталог</a>
+          <a class="nav-link" href="#categories">Категории</a>
+          <a class="nav-link" href="#advantages">О нас</a>
+        </nav>
+
+        <div class="header-actions">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <input id="search-input" type="search" placeholder="Найти игру или гаджет" autocomplete="off" aria-label="Поиск товаров" />
+            <kbd>⌘ K</kbd>
+          </label>
+          <button class="icon-button favorite-header-button" type="button" aria-label="Показать избранное" title="Избранное">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.8 8.8c0 4.1-8.8 10-8.8 10s-8.8-5.9-8.8-10A4.8 4.8 0 0 1 12 6.7a4.8 4.8 0 0 1 8.8 2.1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            <span class="header-count favorite-count">0</span>
+          </button>
+          <button class="cart-trigger" type="button" aria-label="Открыть корзину">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 1.9-1.5L21.5 9H7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="18" cy="20" r="1.3" fill="currentColor"/></svg>
+            <span class="cart-trigger-label">Корзина</span>
+            <span class="header-count cart-count">0</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <span class="eyebrow"><span class="status-dot"></span> ТВОЙ НОВЫЙ УРОВЕНЬ</span>
+            <h1 id="hero-title">ИГРАЙ<br />НА СВОЁМ <span>УРОВНЕ.</span></h1>
+            <p>Техника, которая не подводит в решающий момент. Выбирай лучшее и забирай победу.</p>
+            <a class="button button-primary hero-button" href="#catalog">Выбрать экипировку <span aria-hidden="true">↗</span></a>
+            <div class="hero-proof">
+              <div class="avatar-stack" aria-hidden="true"><span>А</span><span>М</span><span>И</span><span>+</span></div>
+              <div><strong>12 000+</strong><small>игроков уже с нами</small></div>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
+            <div class="hero-image"></div>
+            <div class="hero-tag"><span class="tag-spark">✳</span><span><b>PRO-УРОВЕНЬ</b><small>начинается здесь</small></span></div>
+            <div class="hero-caption">GS<span> / </span>001</div>
+          </div>
+          <div class="hero-bottom"><span>ПРОКАЧАЙ СВОЙ СЕТАП</span><span class="hero-line"></span><span>01 — 03</span></div>
+        </section>
+
+        <section class="category-section" id="categories" aria-label="Категории товаров">
+          <div class="section-topline"><span>01 / ВЫБИРАЙ СВОЁ</span><span>КАТЕГОРИИ</span></div>
+          <div class="category-grid">
+            <button class="category-card category-games" data-category="games" type="button">
+              <span class="category-number">01</span><span class="category-icon">◈</span><span class="category-title">Игры</span><span class="category-arrow">↗</span>
+            </button>
+            <button class="category-card category-keyboards" data-category="keyboards" type="button">
+              <span class="category-number">02</span><span class="category-icon">⌨</span><span class="category-title">Клавиатуры</span><span class="category-arrow">↗</span>
+            </button>
+            <button class="category-card category-mice" data-category="mice" type="button">
+              <span class="category-number">03</span><span class="category-icon">◉</span><span class="category-title">Мыши</span><span class="category-arrow">↗</span>
+            </button>
+            <button class="category-card category-headsets" data-category="headsets" type="button">
+              <span class="category-number">04</span><span class="category-icon">◖</span><span class="category-title">Наушники</span><span class="category-arrow">↗</span>
+            </button>
+            <button class="category-card category-controllers" data-category="controllers" type="button">
+              <span class="category-number">05</span><span class="category-icon">⌘</span><span class="category-title">Геймпады</span><span class="category-arrow">↗</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="catalog-section" id="catalog">
+          <div class="section-topline"><span>02 / ОТОБРАНО ДЛЯ ТЕБЯ</span><span>МАГАЗИН GAMESTORE</span></div>
+          <div class="catalog-heading">
+            <div><span class="eyebrow">ВЫБИРАЙ БЕЗ КОМПРОМИССОВ</span><h2>ТОВАРЫ <span>ДЛЯ ПОБЕДЫ.</span></h2></div>
+            <p>Только проверенная техника.<br />Только то, что действительно работает.</p>
+          </div>
+          <div class="catalog-toolbar">
+            <div class="filter-list" role="group" aria-label="Фильтр по категориям">
+              <button class="filter-chip active" type="button" data-filter="all">Все товары <span class="filter-total"></span></button>
+              <button class="filter-chip" type="button" data-filter="games">Игры</button>
+              <button class="filter-chip" type="button" data-filter="keyboards">Клавиатуры</button>
+              <button class="filter-chip" type="button" data-filter="mice">Мыши</button>
+              <button class="filter-chip" type="button" data-filter="headsets">Наушники</button>
+              <button class="filter-chip" type="button" data-filter="controllers">Геймпады</button>
+            </div>
+            <label class="sort-select-wrap">
+              <span>Сортировка</span>
+              <select id="sort-select" aria-label="Сортировка товаров">
+                <option value="popular">Сначала популярные</option>
+                <option value="price-asc">Сначала дешевле</option>
+                <option value="price-desc">Сначала дороже</option>
+              </select>
+            </label>
+          </div>
+          <div class="active-view-row" aria-live="polite">
+            <span id="results-label">Все товары</span>
+            <button class="clear-favorites-button" type="button" hidden>Показать весь каталог <span>↗</span></button>
+          </div>
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span>⌕</span><h3>Ничего не нашли</h3><p>Попробуй изменить запрос или выбрать другую категорию.</p><button class="button button-secondary reset-filters" type="button">Сбросить фильтры</button>
+          </div>
+        </section>
+
+        <section class="promo-strip" id="advantages">
+          <div class="promo-mark">GS<span>®</span></div>
+          <div class="promo-copy"><span>ИГРАЕМ ПО-СВОЕМУ</span><h2>Никаких компромиссов.<br /><span>Только твоя игра.</span></h2></div>
+          <div class="promo-facts"><div><strong>01</strong><span>Подлинная техника</span></div><div><strong>02</strong><span>Быстрая доставка</span></div><div><strong>03</strong><span>Всегда на связи</span></div></div>
+          <div class="promo-decoration" aria-hidden="true">✳</div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="brand" href="#" aria-label="GameStore — на главную"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M7.2 9.5h17.6a5 5 0 0 1 4.8 3.7l2 7.3a3.7 3.7 0 0 1-6.1 3.6l-4.2-3.7h-5.8l-4.2 3.7a3.7 3.7 0 0 1-6.1-3.6l2-7.3a5 5 0 0 1 4.8-3.7Z" transform="translate(-2 -2)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M10 15.5v5M7.5 18h5m8-1.6h.1m3 3.2h.1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-name">GAME<span>STORE</span></span></a>
+        <span class="footer-note">ТВОЯ ИГРА. ТВОИ ПРАВИЛА.</span>
+        <span class="footer-copy">© 2025 GameStore. Играй с умом.</span>
+      </footer>
+    </div>
+
+    <div class="overlay" id="overlay" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Корзина" aria-hidden="true">
+      <div class="drawer-header"><div><span class="eyebrow">ТВОЙ ВЫБОР</span><h2>Корзина <span class="drawer-count">0</span></h2></div><button class="icon-button close-cart" type="button" aria-label="Закрыть корзину">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><span>⌑</span><h3>Корзина пока пуста</h3><p>Самое время найти что-нибудь для своего сетапа.</p><button class="button button-primary continue-shopping" type="button">Перейти в каталог <span>↗</span></button></div>
+      <div class="cart-footer" id="cart-footer">
+        <div class="cart-subtotal"><span>Итого</span><strong id="cart-total">0 ₽</strong></div>
+        <p>Стоимость доставки рассчитаем при оформлении</p>
+        <button class="button button-primary checkout-button" type="button">Оформить заказ <span>↗</span></button>
+        <small>Демо-магазин · Оплата не производится</small>
+      </div>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
